@@ -13,7 +13,7 @@ const Dashboard = () => {
   const fetchDoctors = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:3000/api/v1/adminPanel/doctors",
+        "https://hospital-management-backend-lmbi.onrender.com/api/v1/adminPanel/doctors",
         { withCredentials: true }
       );
       setDoctors(data.doctors);
@@ -30,7 +30,7 @@ const Dashboard = () => {
   const fetchAppointments = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:3000/api/v1/appointment/appointments/getall",
+        "https://hospital-management-backend-lmbi.onrender.com/api/v1/appointment/appointments/getall",
         { withCredentials: true
          },
         
@@ -47,7 +47,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:3000/api/v1/appointment/update/${appointmentId}`,
+        `https://hospital-management-backend-lmbi.onrender.com/api/v1/appointment/update/${appointmentId}`,
         { status },
         { withCredentials: true }
       );

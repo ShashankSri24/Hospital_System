@@ -112,6 +112,10 @@ body {
   margin-bottom: 30px;
   background: linear-gradient(140deg, #0b6fc6, #0052d6ca);
 }
+.form-component button:hover{
+  background: rgb(10, 88, 157);
+   cursor: pointer;
+}
 .form-component .wrapper {
   display: flex;
   gap: 50px;
@@ -554,7 +558,7 @@ body {
   border-radius: 8px;
   font-size: 24px;
   margin-bottom: 30px;
-  background: linear-gradient(140deg, #9083d5, #271776ca);
+  background: linear-gradient(140deg,#0b6fc6, #0052d6ca);
 }
 @media (max-width: 945px) {
   .add-doctor-form form .first-wrapper {

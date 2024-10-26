@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/v1/adminPanel/admin/login",
+        "https://hospital-management-backend-lmbi.onrender.com/api/v1/adminPanel/admin/login",
         { email, password, role: "Admin" },
         { withCredentials: true, headers: { "Content-Type": "application/json" } }
       );

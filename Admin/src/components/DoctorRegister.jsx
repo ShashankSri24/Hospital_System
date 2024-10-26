@@ -67,7 +67,7 @@ const DoctorRegister = () => {
           formData.append("docAvatar", docAvatar);
           
           const res = await axios
-            .post("http://localhost:3000/api/v1/adminPanel/admin/doctor/addNew", formData, {
+            .post("https://hospital-management-backend-lmbi.onrender.com/api/v1/adminPanel/admin/doctor/addNew", formData, {
               withCredentials: true,
               headers: { "Content-Type": "multipart/form-data" },
               

@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { Context } from "../main";
 import axios from "axios";
   
- 
+// This function is  for admin registragtion where i am calling the api with post method
 const AdminRegister = () => {
    
     const { isAuthenticated,setIsAuthenticated } = useContext(Context);
@@ -25,7 +25,7 @@ const AdminRegister = () => {
       try {
        const res =  await axios
           .post(
-            "http://localhost:3000/api/v1/adminPanel/adminRegister",
+            "https://hospital-management-backend-lmbi.onrender.com/api/v1/adminPanel/adminRegister",
             { firstName, lastName, email, phone, dob, gender, password },
             {
               withCredentials: true,
@@ -42,9 +42,10 @@ const AdminRegister = () => {
           setDob("");
           setGender("");
           setPassword("");
-        }catch(error){
-          toast.error(error.res.message)
+        }catch(error) {
+          toast.error(error.message);
         }
+        
       } 
     
     

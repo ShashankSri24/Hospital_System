@@ -21,7 +21,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/v1/user/patient/register",
+        "https://hospital-management-backend-lmbi.onrender.com/api/v1/user/patient/register",
         { firstName, lastName, email, phone, dob, gender, password ,},
         {
           withCredentials: true,
@@ -112,7 +112,7 @@ const Register = () => {
           >
             <p style={{ marginBottom: 0 }}>Already Registered?</p>
             <Link
-              to={"/register"}
+              to={"/login"}
               style={{ textDecoration: "none", color: "#271776ca" }}
             >
               Login Now

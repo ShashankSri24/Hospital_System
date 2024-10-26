@@ -4,10 +4,10 @@ import { toast } from "react-toastify";
 import { Context } from "../main";
 import axios from "axios";
   
-// This function is  for admin registragtion where i am calling the api with post method
+
 const AdminRegister = () => {
    
-    const { isAuthenticated,setIsAuthenticated } = useContext(Context);
+    const {setIsAuthenticated } = useContext(Context);
 
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
